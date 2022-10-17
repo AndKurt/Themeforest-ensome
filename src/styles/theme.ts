@@ -6,6 +6,7 @@ const COLOR = {
   BLACK: '#292D33',
   GREY: '#9497A1',
   PRIMARY: '#185CFF',
+  PRIMARY_HOVER: '#467DFF',
   SECONDARY: '#002B4E',
   TERTIARY: '#F0F9FF',
   HELPER_BLUE_1: '#194060',
@@ -14,6 +15,24 @@ const COLOR = {
   BACKGROUND: '#F1F6FA',
   RED: '#C14040',
 }
+
+const BACKGROUND = {
+  default: COLOR.WHITE,
+  light: COLOR.BACKGROUND,
+  dark: COLOR.SECONDARY,
+  primary: COLOR.PRIMARY,
+}
+
+const headlineBase = css`
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  letter-spacing: -0.015em;
+`
+const paragraphBase = css`
+  font-family: 'Open Sans';
+  font-style: normal;
+  letter-spacing: -0.015em;
+`
 
 // Font sizes
 const FONT_SIZE = {
@@ -56,6 +75,81 @@ const FONT_WEIGHT = {
   800: 800,
 }
 
+const HEADLINE = {
+  EXTRABOLD_1: css`
+    ${headlineBase};
+    ${FONT_SIZE.XXXL};
+    font-weight: ${FONT_WEIGHT[800]};
+  `,
+  EXTRABOLD_2: css`
+    ${headlineBase};
+    ${FONT_SIZE.XXL};
+    font-weight: ${FONT_WEIGHT[800]};
+  `,
+  EXTRABOLD_3: css`
+    ${headlineBase};
+    ${FONT_SIZE.XL};
+    font-weight: ${FONT_WEIGHT[800]};
+  `,
+  BOLD_4: css`
+    ${headlineBase};
+    ${FONT_SIZE.L};
+    font-weight: ${FONT_WEIGHT[700]};
+  `,
+  BOLD_5: css`
+    ${headlineBase};
+    ${FONT_SIZE.M};
+    font-weight: ${FONT_WEIGHT[700]};
+  `,
+  BOLD_6: css`
+    ${headlineBase};
+    ${FONT_SIZE.S}
+    font-weight:${FONT_WEIGHT[800]};
+    line-height: 24px;
+  `,
+  SEMIBOLD_7: css`
+    ${headlineBase};
+    ${FONT_SIZE.XS};
+    font-weight: ${FONT_WEIGHT[600]};
+    letter-spacing: -0.01em;
+  `,
+  MEDIUM_7: css`
+    ${headlineBase};
+    ${FONT_SIZE.XS};
+    font-weight: ${FONT_WEIGHT[500]};
+    letter-spacing: -0.01em;
+  `,
+}
+
+const PARAGRAPH = {
+  REGULAR_1: css`
+    ${paragraphBase};
+    ${FONT_SIZE.M};
+    font-weight: ${FONT_WEIGHT[400]};
+    line-height: 33px;
+  `,
+  REGULAR_2: css`
+    ${paragraphBase};
+    ${FONT_SIZE.S};
+    font-weight: ${FONT_WEIGHT[400]};
+  `,
+  BOLD_2: css`
+    ${paragraphBase};
+    ${FONT_SIZE.S};
+    font-weight: ${FONT_WEIGHT[700]};
+  `,
+  REGULAR_3: css`
+    ${paragraphBase};
+    ${FONT_SIZE.XS};
+    font-weight: ${FONT_WEIGHT[400]};
+  `,
+  BOLD_3: css`
+    ${paragraphBase};
+    ${FONT_SIZE.XS};
+    font-weight: ${FONT_WEIGHT[600]};
+  `,
+}
+
 const BOX_SHADOW = {
   BUTTON: '0px 12px 30px rgba(24, 92, 255, 0.18)',
   CARD_1: '0px 2px 20px 17px rgba(24, 92, 255, 0.04)',
@@ -65,7 +159,13 @@ const BOX_SHADOW = {
 }
 
 // Media queries
-const size = {
+const WIDTH = {
+  navLink: '61px',
+  buttonXS: '110px',
+  buttonS: '168px',
+  buttonM: '190px',
+  buttonL: '210px',
+  buttonRound: '140px',
   mobileS: '320px',
   mobileM: '375px',
   mobileL: '425px',
@@ -75,17 +175,23 @@ const size = {
 }
 
 const DEVICE = {
-  mobileS: `(max-width: ${size.mobileS})`,
-  mobileM: `(max-width: ${size.mobileM})`,
-  mobileL: `(max-width: ${size.mobileL})`,
-  tablet: `(max-width: ${size.tablet})`,
-  laptop: `(max-width: ${size.laptop})`,
-  desktop: `(max-width: ${size.desktop})`,
+  mobileS: `(max-width: ${WIDTH.mobileS})`,
+  mobileM: `(max-width: ${WIDTH.mobileM})`,
+  mobileL: `(max-width: ${WIDTH.mobileL})`,
+  tablet: `(max-width: ${WIDTH.tablet})`,
+  laptop: `(max-width: ${WIDTH.laptop})`,
+  desktop: `(max-width: ${WIDTH.desktop})`,
+}
+
+// Height
+const HEIGHT = {
+  HEADER: '126px',
 }
 
 const RADIUS = {
   S: '6px',
   M: '20px',
+  FULL: '50%',
 }
 
 const SPACES = {
@@ -114,9 +220,9 @@ const SVG_SIZE = {
 }
 
 const TRANSITION = {
-  SLOW: 1.5,
-  MEDIUM: 0.8,
-  FAST: 0.4,
+  SLOW: '1.5s',
+  MEDIUM: '0.8s',
+  FAST: '0.4s',
 }
 
 const OPACITY = {
@@ -134,6 +240,11 @@ export default {
   FONT_WEIGHT,
   RADIUS,
   SVG_SIZE,
+  WIDTH,
   OPACITY,
   TRANSITION,
+  HEADLINE,
+  PARAGRAPH,
+  HEIGHT,
+  BACKGROUND,
 }

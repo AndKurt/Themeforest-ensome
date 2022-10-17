@@ -1,20 +1,21 @@
 const path = require('path')
+const resolve = (arg) => path.resolve(__dirname, arg)
 
 module.exports = {
   webpack: {
     alias: {
-      '@': path.resolve(__dirname, 'src/'),
-      '@api': path.resolve(__dirname, 'src/api/'),
-      '@assets': path.resolve(__dirname, 'src/assets/'),
-      '@components': path.resolve(__dirname, 'src/components/'),
-      '@constants': path.resolve(__dirname, 'src/constants/'),
-      '@hooks': path.resolve(__dirname, 'src/hooks/'),
-      '@interfaces': path.resolve(__dirname, 'src/interfaces/'),
-      '@mock': path.resolve(__dirname, 'src/mock/'),
-      '@pages': path.resolve(__dirname, 'src/pages/'),
-      '@store': path.resolve(__dirname, 'src/store/'),
-      '@styles': path.resolve(__dirname, 'src/styles/'),
-      '@utils': path.resolve(__dirname, 'src/utils/'),
+      '@App': resolve('src/App/'),
+      '@assets': resolve('src/assets/'),
+      '@components': resolve('src/components/'),
+      '@constants': resolve('src/constants/'),
+      '@hooks': resolve('src/hooks/'),
+      '@interfaces': resolve('src/interfaces/'),
+      '@layout': resolve('src/layout/'),
+      '@mock': resolve('src/mock/'),
+      '@pages': resolve('src/pages/'),
+      '@store': resolve('src/store/'),
+      '@styles': resolve('src/styles/'),
+      '@utils': resolve('src/utils/'),
     },
   },
 }

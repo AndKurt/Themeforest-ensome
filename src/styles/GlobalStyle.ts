@@ -2,6 +2,8 @@ import { createGlobalStyle } from 'styled-components'
 
 import theme from './theme'
 
+const { COLOR } = theme
+
 export const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 * {
@@ -15,7 +17,7 @@ html,
 body {
   height: 100%;
   font-family: 'Manrope', sans-serif;
-  line-height: 1;
+  line-height: 1; 
 }
 a {
   text-decoration: none;
@@ -31,8 +33,8 @@ a {
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb {
-  background: ${theme.COLOR.BACKGROUND};
-  border: 1px solid ${theme.COLOR.GREY};
+  background: ${COLOR.BACKGROUND};
+  border: 1px solid ${COLOR.GREY};
   border-radius: 5px;
 }
 `

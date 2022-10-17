@@ -115,15 +115,7 @@
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
     "quotes": [2, "single", "avoid-escape"],
-    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
-    "object-curly-newline": [
-      "error",
-      {
-        "ObjectPattern": { "multiline": true },
-        "ImportDeclaration": "never",
-        "ExportDeclaration": { "multiline": true, "minProperties": 2 }
-      }
-    ]
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
   },
   "overrides": [
     {
@@ -149,12 +141,13 @@
       },
       "alias": {
         "map": [
-          ["@api", "./api"],
+          ["@App", "./App"],
           ["@assets", "./assets"],
           ["@components", "./components"],
           ["@constants", "./constants"],
           ["@hooks", "./hooks"],
           ["@interfaces", "./interfaces"],
+          ["@layout", "./layout"],
           ["@mock", "./mock"],
           ["@pages", "./pages"],
           ["@store", "./store"],
