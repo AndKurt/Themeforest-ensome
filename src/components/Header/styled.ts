@@ -19,7 +19,7 @@ export const StyledLink = styled(Link)`
   color: ${COLOR.GREY};
   cursor: pointer;
   display: inline-block;
-  margin: 20px;
+  margin: 17px;
   text-align: center;
   transition: ${TRANSITION.FAST};
   ${HEADLINE.MEDIUM_7}

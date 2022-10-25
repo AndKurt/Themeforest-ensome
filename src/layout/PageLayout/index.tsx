@@ -1,7 +1,7 @@
 import React, { Children } from 'react'
 
 import { Footer, Header } from '@components/index'
-import { ILayout } from '@interfaces/index'
+import { ILayout } from '@layout/types/index'
 
 import { Wrapper } from './styled'
 

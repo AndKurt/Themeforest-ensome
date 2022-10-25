@@ -1,4 +1,14 @@
-import React from 'react'
-import {} from 'styled-components/macro'
+import React, { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
-export const AboutUsPage = () => <div>AboutUsPage</div>
+export const AboutUsPage = () => {
+  const location = useLocation()
+  useEffect(() => {
+    console.log(location)
+
+    const baseTitle = document.title
+    document.title = `${baseTitle} | `
+  }, [])
+
+  return <div>AboutUsPage</div>
+}

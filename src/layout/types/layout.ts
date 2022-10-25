@@ -1,11 +1,12 @@
+import React from 'react'
+
 import { IContentWrapper } from './theme'
 
 export interface ILayout {
-  children?: JSX.Element
+  children?: React.ReactNode
 }
 
-export interface IContentLayout extends IContentWrapper {
+export interface IContentLayout extends IContentWrapper, ILayout {
   bgColor: 'default' | 'light' | 'dark'
   contentDirection: 'row' | 'column'
-  children: JSX.Element
 }

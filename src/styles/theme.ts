@@ -24,7 +24,7 @@ const BACKGROUND = {
 }
 
 const headlineBase = css`
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Manrope';
   font-style: normal;
   letter-spacing: -0.015em;
 `
@@ -64,6 +64,10 @@ const FONT_SIZE = {
     font-size: 46px;
     line-height: 60px;
   `,
+  MAIN: css`
+    font-size: 57px;
+    line-height: 66px;
+  `,
 }
 
 // Font weights
@@ -76,6 +80,11 @@ const FONT_WEIGHT = {
 }
 
 const HEADLINE = {
+  MAIN: css`
+    ${headlineBase};
+    ${FONT_SIZE.MAIN};
+    font-weight: ${FONT_WEIGHT[800]};
+  `,
   EXTRABOLD_1: css`
     ${headlineBase};
     ${FONT_SIZE.XXXL};
@@ -165,7 +174,7 @@ const WIDTH = {
   buttonS: '168px',
   buttonM: '190px',
   buttonL: '210px',
-  buttonRound: '140px',
+  buttonRound: '120px',
   mobileS: '320px',
   mobileM: '375px',
   mobileL: '425px',

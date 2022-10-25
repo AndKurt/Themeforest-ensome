@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { IContentLayout } from '@interfaces/index'
+import { IContentLayout } from '@layout/types/index'
 
 import { ContentWrapper } from './styled'
 

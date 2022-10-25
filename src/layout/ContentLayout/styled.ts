@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro'
 
-import { IContentWrapper } from '@interfaces/index'
+import { IContentWrapper } from '@layout/types/index'
 import theme from '@styles/theme'
 
 const { BACKGROUND, WIDTH } = theme
@@ -12,6 +12,6 @@ export const ContentWrapper = styled.div<IContentWrapper>`
   flex-direction: ${({ contentDirection }) => contentDirection};
   justify-content: space-between;
   margin: 0 auto;
+  max-width: ${WIDTH.laptop};
   width: 100%;
-  width: ${WIDTH.laptop};
 `
