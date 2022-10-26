@@ -8,8 +8,10 @@ const { HEADLINE, COLOR } = theme
 
 export const TitleElement = styled.h2<ITitleElement>`
   display: inline-block;
-  max-width: ${({ width }) => (width ? `${width}px` : '100%')};
+  margin-bottom: ${({ bottom }) => (bottom ? `${bottom}px` : 0)};
   ${HEADLINE.MAIN}
+  margin-top: ${({ top }) => (top ? `${top}px` : 0)};
+  max-width: ${({ width }) => (width ? `${width}px` : '100%')};
 
   span {
     color: ${COLOR.PRIMARY};

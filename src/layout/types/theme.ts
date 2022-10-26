@@ -1,4 +1,6 @@
+import { BackgroundColor, ContentDirection } from '@interfaces/index'
+
 export interface IContentWrapper {
-  bgColor: 'default' | 'light' | 'dark'
-  contentDirection: 'row' | 'column'
+  background?: BackgroundColor
+  contentDirection: ContentDirection
 }

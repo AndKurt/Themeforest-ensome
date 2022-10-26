@@ -21,6 +21,7 @@ const BACKGROUND = {
   light: COLOR.BACKGROUND,
   dark: COLOR.SECONDARY,
   primary: COLOR.PRIMARY,
+  primaryHover: COLOR.PRIMARY_HOVER,
 }
 
 const headlineBase = css`
@@ -222,6 +223,7 @@ const SPACES = {
   20: 20,
   25: 25,
   30: 30,
+  35: 35,
   40: 40,
   50: 50,
   60: 60,
@@ -235,6 +237,14 @@ const SVG_SIZE = {
   M: css`
     height: 32px;
     width: 32px;
+  `,
+  L: css`
+    height: 45px;
+    width: 45px;
+  `,
+  XL: css`
+    height: 80px;
+    width: 80px;
   `,
 }
 

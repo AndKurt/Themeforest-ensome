@@ -1,21 +1,21 @@
 import React from 'react'
 
-import { TitleSize } from '@interfaces/styles'
-
-type ButtonColor = 'blue' | 'white'
-type ButtonRadius = 'small' | 'medium'
-type ButtonSize = 'extra-small' | 'small' | 'medium' | 'large' | 'round'
+import { BackgroundColor, ButtonSize, Radius, TitleSize } from '@interfaces/styles'
 
 export interface IButtonWrapper {
-  color: ButtonColor
-  radius?: ButtonRadius
+  color?: BackgroundColor
+  radius?: Radius
   buttonSize: ButtonSize
   size?: TitleSize
   padding?: number
+  top?: number
+  bottom?: number
+  shadow?: boolean
+  border?: boolean
 }
 
 export interface IButton extends IButtonWrapper {
-  name: string
+  name?: string
   icon?: string
   // TODO remove ?
   handleClick: () => void

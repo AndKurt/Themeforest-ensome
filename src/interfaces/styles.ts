@@ -13,3 +13,13 @@ export type TitleSize =
   | 'medium_7'
 
 export type JustifyContent = 'center' | 'space-around' | 'space-between'
+
+export type SvgSize = 'S' | 'M' | 'L' | 'XL'
+
+export type Radius = 'S' | 'M' | 'FULL'
+
+export type ButtonSize = 'extra-small' | 'small' | 'medium' | 'large' | 'round'
+
+export type ContentDirection = 'row' | 'column'
+
+export type BackgroundColor = 'default' | 'light' | 'dark' | 'primary' | 'primaryHover'

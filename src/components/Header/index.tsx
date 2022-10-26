@@ -8,7 +8,7 @@ import { ContentLayout } from '@layout/ContentLayout'
 
 import { HeaderWrapper, StyledLink } from './styled'
 
-import { CommonButton } from '..'
+import { CommonButton, Section } from '..'
 
 export const Header = () => {
   const [playMedia, setPlayMedia] = useState(false)
@@ -19,27 +19,30 @@ export const Header = () => {
 
   return (
     <HeaderWrapper>
-      <ContentLayout bgColor="light" contentDirection="row">
-        <Link to="/">
-          <img src={logo} alt="logo" />
-        </Link>
-        <nav>
-          {headerNavigation.map(({ name, path }) => (
-            <StyledLink key={name} to={path}>
-              {name}
-            </StyledLink>
-          ))}
-        </nav>
-        <CommonButton
-          buttonSize="small"
-          color="blue"
-          radius="small"
-          name="Watch the demo"
-          icon={playIcon}
-          size="semibold_7"
-          padding={10}
-          handleClick={handlePlayMedia}
-        />
+      <ContentLayout background="light" contentDirection="row">
+        <Section>
+          <Link to="/">
+            <img src={logo} alt="logo" />
+          </Link>
+          <nav>
+            {headerNavigation.map(({ name, path }) => (
+              <StyledLink key={name} to={path}>
+                {name}
+              </StyledLink>
+            ))}
+          </nav>
+          <CommonButton
+            buttonSize="small"
+            color="primary"
+            radius="S"
+            name="Watch the demo"
+            icon={playIcon}
+            size="semibold_7"
+            padding={10}
+            shadow
+            handleClick={handlePlayMedia}
+          />
+        </Section>
       </ContentLayout>
     </HeaderWrapper>
   )

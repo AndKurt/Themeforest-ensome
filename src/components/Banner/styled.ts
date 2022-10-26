@@ -7,7 +7,6 @@ import { IBannerContainer } from './types'
 const { COLOR } = theme
 
 export const BannerContainer = styled.div<IBannerContainer>`
-  background: ${({ background }) => (background ? COLOR.BACKGROUND : COLOR.WHITE)};
   display: flex;
   flex-wrap: wrap;
   gap: 45px;

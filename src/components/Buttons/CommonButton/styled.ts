@@ -1,49 +1,34 @@
 import styled from 'styled-components/macro'
 
 import theme from '@styles/theme'
-import { setTitleFontSize } from '@utils/index'
+import { setButtonSize, setTitleFontSize } from '@utils/index'
 
 import { IButtonWrapper } from './types'
 
-const { COLOR, RADIUS, TRANSITION, BOX_SHADOW, HEADLINE, WIDTH } = theme
+const { BACKGROUND, COLOR, RADIUS, TRANSITION, BOX_SHADOW, HEADLINE, WIDTH } = theme
 
 export const ButtonWrapper = styled.button<IButtonWrapper>`
   ${({ size }) => setTitleFontSize(size || 'bold_6')}
+  ${({ border }) => border && `border: 1px solid ${COLOR.PRIMARY}`}
+
   align-items:center;
-  background: ${({ color }) => (color === 'blue' ? COLOR.PRIMARY : COLOR.WHITE)};
-  border: 1px solid ${COLOR.PRIMARY};
-  border-radius: ${({ radius }) => {
-    if (!radius) {
-      return RADIUS.FULL
-    }
-    return radius === 'small' ? RADIUS.S : RADIUS.M
-  }};
-  box-shadow: ${BOX_SHADOW.BUTTON};
-  color: ${({ color }) => (color === 'blue' ? COLOR.WHITE : COLOR.PRIMARY)};
+  background: ${({ color }) => (color ? BACKGROUND[color] : BACKGROUND.default)};
+  border-radius: ${({ radius }) => (radius ? RADIUS[radius] : 0)};
+  box-shadow: ${({ shadow }) => shadow && `${BOX_SHADOW.BUTTON}`};
+  color: ${({ color }) => (color === 'primary' ? COLOR.WHITE : COLOR.PRIMARY)};
   cursor: pointer;
   display: flex;
   height: ${({ buttonSize }) => (buttonSize === 'round' ? WIDTH.buttonRound : 'auto')};
   justify-content: space-around;
+  margin-bottom: ${({ bottom }) => (bottom ? `${bottom}px` : 0)};
+  margin-top: ${({ top }) => (top ? `${top}px` : 0)};
   padding: ${({ padding }) => `${padding}px`};
   transition: ${TRANSITION.FAST};
-  width: ${({ buttonSize }) => {
-    switch (buttonSize) {
-      case 'extra-small':
-        return WIDTH.buttonXS
-      case 'small':
-        return WIDTH.buttonS
-      case 'medium':
-        return WIDTH.buttonM
-      case 'large':
-        return WIDTH.buttonL
-      default:
-        return WIDTH.buttonRound
-    }
-  }};
+  width: ${({ buttonSize }) => setButtonSize(buttonSize)};
 
   :hover {
-    background: ${({ color }) => (color === 'blue' ? COLOR.PRIMARY_HOVER : COLOR.WHITE)};
-    border: 1px solid ${COLOR.PRIMARY_HOVER};
+    background: ${({ color }) => (color ? COLOR.PRIMARY_HOVER : COLOR.WHITE)};
+    ${({ border }) => border && `border: 1px solid ${COLOR.PRIMARY_HOVER}`}
   }
 
   :active {

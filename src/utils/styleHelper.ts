@@ -1,7 +1,7 @@
-import { JustifyContent, ParagraphSize, TitleSize } from '@interfaces/styles'
+import { ButtonSize, JustifyContent, ParagraphSize, SvgSize, TitleSize } from '@interfaces/styles'
 import theme from '@styles/theme'
 
-const { PARAGRAPH, HEADLINE } = theme
+const { PARAGRAPH, HEADLINE, SVG_SIZE, WIDTH } = theme
 
 export const setParagraphFontSize = (size: ParagraphSize) => {
   switch (size) {
@@ -49,5 +49,33 @@ export const setJustifyContent = (value: JustifyContent) => {
       return 'space-between'
     default:
       return 'center'
+  }
+}
+
+export const setSvgSize = (size: SvgSize) => {
+  switch (size) {
+    case 'M':
+      return SVG_SIZE.M
+    case 'L':
+      return SVG_SIZE.L
+    case 'XL':
+      return SVG_SIZE.XL
+    default:
+      return SVG_SIZE.S
+  }
+}
+
+export const setButtonSize = (size: ButtonSize) => {
+  switch (size) {
+    case 'extra-small':
+      return WIDTH.buttonXS
+    case 'small':
+      return WIDTH.buttonS
+    case 'medium':
+      return WIDTH.buttonM
+    case 'large':
+      return WIDTH.buttonL
+    default:
+      return WIDTH.buttonRound
   }
 }
