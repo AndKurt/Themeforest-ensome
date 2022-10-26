@@ -1,4 +1,4 @@
-import { ParagraphSize, TitleSize } from '@interfaces/textSize'
+import { JustifyContent, ParagraphSize, TitleSize } from '@interfaces/styles'
 import theme from '@styles/theme'
 
 const { PARAGRAPH, HEADLINE } = theme
@@ -20,6 +20,8 @@ export const setParagraphFontSize = (size: ParagraphSize) => {
 
 export const setTitleFontSize = (size: TitleSize) => {
   switch (size) {
+    case 'extra':
+      return HEADLINE.EXTRA
     case 'extrabold_2':
       return HEADLINE.EXTRABOLD_2
     case 'extrabold_3':
@@ -36,5 +38,16 @@ export const setTitleFontSize = (size: TitleSize) => {
       return HEADLINE.MEDIUM_7
     default:
       return HEADLINE.EXTRABOLD_1
+  }
+}
+
+export const setJustifyContent = (value: JustifyContent) => {
+  switch (value) {
+    case 'space-around':
+      return 'space-around'
+    case 'space-between':
+      return 'space-between'
+    default:
+      return 'center'
   }
 }

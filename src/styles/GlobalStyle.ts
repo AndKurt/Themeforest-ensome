@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 import theme from './theme'
 
-const { COLOR } = theme
+const { COLOR, DEVICE } = theme
 
 export const GlobalStyle = createGlobalStyle`
 * {
@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
 }
 html,
 body {
+  font-size: 16px;
   height: 100%;
   font-family: 'Manrope', 'Open Sans', sans-serif;
 }
@@ -38,6 +39,35 @@ a {
 
   :hover {
     background: ${COLOR.PRIMARY};
+  }
+}
+
+// ---MEDIA QUERIES---
+@media ${DEVICE.tablet} {
+  html,
+  body {
+  font-size: 15px;
+  }
+}
+
+@media ${DEVICE.mobileL} {
+  html,
+  body {
+  font-size: 14px;
+  }
+}
+
+@media ${DEVICE.mobileM} {
+  html,
+  body {
+  font-size: 13px;
+  }
+}
+
+@media ${DEVICE.mobileS} {
+  html,
+  body {
+  font-size: 12px;
   }
 }
 `

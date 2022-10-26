@@ -1,32 +1,14 @@
 import styled from 'styled-components/macro'
 
 import theme from '@styles/theme'
+import { setTitleFontSize } from '@utils/index'
 
 import { IButtonWrapper } from './types'
 
 const { COLOR, RADIUS, TRANSITION, BOX_SHADOW, HEADLINE, WIDTH } = theme
 
 export const ButtonWrapper = styled.button<IButtonWrapper>`
-  ${({ size }) => {
-    switch (size) {
-      case 'extrabold_2':
-        return HEADLINE.EXTRABOLD_2
-      case 'extrabold_3':
-        return HEADLINE.EXTRABOLD_3
-      case 'bold_4':
-        return HEADLINE.BOLD_4
-      case 'bold_5':
-        return HEADLINE.BOLD_5
-      case 'bold_6':
-        return HEADLINE.BOLD_6
-      case 'semibold_7':
-        return HEADLINE.SEMIBOLD_7
-      case 'medium_7':
-        return HEADLINE.MEDIUM_7
-      default:
-        return HEADLINE.EXTRABOLD_1
-    }
-  }}
+  ${({ size }) => setTitleFontSize(size || 'bold_6')}
   align-items:center;
   background: ${({ color }) => (color === 'blue' ? COLOR.PRIMARY : COLOR.WHITE)};
   border: 1px solid ${COLOR.PRIMARY};

@@ -1,6 +1,7 @@
 export type ParagraphSize = 'regular_1' | 'regular_2' | 'bold_2' | 'regular_3' | 'bold_3'
 
 export type TitleSize =
+  | 'extra'
   | 'main'
   | 'extrabold_1'
   | 'extrabold_2'
@@ -10,3 +11,5 @@ export type TitleSize =
   | 'bold_6'
   | 'semibold_7'
   | 'medium_7'
+
+export type JustifyContent = 'center' | 'space-around' | 'space-between'

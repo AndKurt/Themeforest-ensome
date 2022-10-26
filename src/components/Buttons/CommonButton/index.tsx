@@ -4,7 +4,7 @@ import { ButtonWrapper } from './styled'
 import { IButton } from './types'
 
 export const CommonButton = memo(
-  ({ name, color, radius, buttonSize, icon, handleClick, size = 'bold_6', padding = 14 }: IButton) => (
+  ({ name, color, radius, buttonSize, icon, handleClick, size, padding = 14 }: IButton) => (
     <ButtonWrapper
       color={color}
       radius={radius}

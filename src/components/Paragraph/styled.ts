@@ -10,6 +10,6 @@ const { COLOR } = theme
 export const ParagraphWrapper = styled.p<IParagraphWrapper>`
   color: ${COLOR.GREY};
   ${({ size }) => setParagraphFontSize(size || 'regular_1')}
-  padding-bottom: ${({ bottom }) => (bottom ? `${bottom}px` : 0)};
-  padding-top: ${({ top }) => (top ? `${top}px` : 0)};
+  margin-bottom: ${({ bottom }) => (bottom ? `${bottom}px` : 0)};
+  margin-top: ${({ top }) => (top ? `${top}px` : 0)};
 `

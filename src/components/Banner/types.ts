@@ -1,8 +1,8 @@
 import React from 'react'
 
 export interface IBannerContainer {
-  height?: number
   width?: number
+  background?: boolean
 }
 
 export interface IBanner extends IBannerContainer {

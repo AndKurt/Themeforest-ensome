@@ -1,8 +1,8 @@
 import React, { useCallback, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import playIcon from '@assets/button_img/icon_play_circle.svg'
-import logo from '@assets/logo/logo_blue.svg'
+import playIcon from '@assets/svg/button_img/icon_play_circle.svg'
+import logo from '@assets/svg/logo_blue.svg'
 import { headerNavigation } from '@constants/index'
 import { ContentLayout } from '@layout/ContentLayout'
 

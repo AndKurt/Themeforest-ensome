@@ -37,36 +37,40 @@ const paragraphBase = css`
 // Font sizes
 const FONT_SIZE = {
   XS: css`
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
   `,
   S: css`
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 1rem;
+    line-height: 1.75rem;
   `,
   M: css`
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
   `,
   L: css`
-    font-size: 22px;
-    line-height: 33px;
+    font-size: 1.375rem;
+    line-height: 2.0625rem;
   `,
   XL: css`
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 1.875rem;
+    line-height: 2.5rem;
   `,
   XXL: css`
-    font-size: 38px;
-    line-height: 56px;
+    font-size: 2.375rem;
+    line-height: 3.5rem;
   `,
   XXXL: css`
-    font-size: 46px;
-    line-height: 60px;
+    font-size: 2.875rem;
+    line-height: 3.75rem;
   `,
   MAIN: css`
-    font-size: 57px;
-    line-height: 66px;
+    font-size: 3.5625rem;
+    line-height: 4.125rem;
+  `,
+  EXTRA: css`
+    font-size: 3.1255rem;
+    line-height: 7rem;
   `,
 }
 
@@ -80,6 +84,12 @@ const FONT_WEIGHT = {
 }
 
 const HEADLINE = {
+  EXTRA: css`
+    ${paragraphBase};
+    ${FONT_SIZE.EXTRA};
+    font-weight: ${FONT_WEIGHT[800]};
+    letter-spacing: -0.025em;
+  `,
   MAIN: css`
     ${headlineBase};
     ${FONT_SIZE.MAIN};

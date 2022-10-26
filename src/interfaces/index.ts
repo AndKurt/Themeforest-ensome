@@ -1,1 +1,1 @@
-export * from './textSize'
+export * from './styles'

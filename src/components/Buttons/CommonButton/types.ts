@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { TitleSize } from '@interfaces/textSize'
+import { TitleSize } from '@interfaces/styles'
 
 type ButtonColor = 'blue' | 'white'
 type ButtonRadius = 'small' | 'medium'

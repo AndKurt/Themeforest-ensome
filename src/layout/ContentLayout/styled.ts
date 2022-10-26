@@ -3,7 +3,7 @@ import styled from 'styled-components/macro'
 import { IContentWrapper } from '@layout/types/index'
 import theme from '@styles/theme'
 
-const { BACKGROUND, WIDTH } = theme
+const { BACKGROUND, WIDTH, DEVICE, SPACES } = theme
 
 export const ContentWrapper = styled.div<IContentWrapper>`
   align-items: center;
@@ -14,4 +14,8 @@ export const ContentWrapper = styled.div<IContentWrapper>`
   margin: 0 auto;
   max-width: ${WIDTH.laptop};
   width: 100%;
+
+  @media ${DEVICE.tablet} {
+    padding: 0 16px;
+  }
 `
