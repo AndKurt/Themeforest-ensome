@@ -16,7 +16,7 @@ export const Section5 = () => (
           aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
         </Paragraph>
       </BlockLayout>
-      <CardsContainer width={540} height={600} top={120} bottom={120} gap={30}>
+      <CardsContainer width={540} height={600} top={120} bottom={120} gap={30} isWrap>
         {benefitsData.map(({ src, alt, title, paragraph }) => (
           <CommonCard
             key={title}

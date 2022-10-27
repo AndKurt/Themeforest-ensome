@@ -1,13 +1,13 @@
 import React from 'react'
 
-import { TitleSize } from '@interfaces/styles'
+import { Color, TitleSize } from '@interfaces/styles'
 
 export interface ITitleElement {
   width?: number
   size?: TitleSize
   top?: number
   bottom?: number
-  color?: 'blue'
+  color?: Color
 }
 
 export interface ITitle extends ITitleElement {

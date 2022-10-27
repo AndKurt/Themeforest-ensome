@@ -181,17 +181,37 @@ const BOX_SHADOW = {
 // Media queries
 const WIDTH = {
   navLink: '61px',
-  buttonXS: '110px',
-  buttonS: '168px',
-  buttonM: '190px',
-  buttonL: '210px',
-  buttonRound: '120px',
   mobileS: '320px',
   mobileM: '375px',
   mobileL: '425px',
   tablet: '768px',
   laptop: '1110px',
   desktop: '1920px',
+}
+
+// Height
+const HEIGHT = {
+  HEADER: '126px',
+}
+
+const BUTTON_WIDTH = {
+  buttonXS: '41px',
+  buttonS: '110px',
+  buttonM: '168px',
+  buttonL: '145px',
+  buttonXL: '190px',
+  buttonXXL: '210px',
+  buttonRoundSmall: '100px',
+  buttonRound: '120px',
+}
+
+const BUTTON_HEIGHT = {
+  buttonXS: '32px',
+  buttonS: '44px',
+  buttonM: '54px',
+  buttonL: '60px',
+  buttonRoundSmall: '100px',
+  buttonRound: '120px',
 }
 
 const DEVICE = {
@@ -201,11 +221,6 @@ const DEVICE = {
   tablet: `(max-width: ${WIDTH.tablet})`,
   laptop: `(max-width: ${WIDTH.laptop})`,
   desktop: `(max-width: ${WIDTH.desktop})`,
-}
-
-// Height
-const HEIGHT = {
-  HEADER: '126px',
 }
 
 const RADIUS = {
@@ -276,4 +291,6 @@ export default {
   PARAGRAPH,
   HEIGHT,
   BACKGROUND,
+  BUTTON_WIDTH,
+  BUTTON_HEIGHT,
 }

@@ -5,29 +5,31 @@ import { IButton } from './types'
 
 export const CommonButton = memo(
   ({
-    name,
+    name = '',
     color = 'default',
     radius,
-    buttonSize,
+    width,
+    height,
     icon,
     handleClick,
-    size,
+    textSize,
     padding = 14,
     top,
     bottom,
-    shadow,
+    isShadow,
     border,
   }: IButton) => (
     <ButtonWrapper
       color={color}
       radius={radius}
-      buttonSize={buttonSize}
+      width={width}
+      height={height}
       onClick={handleClick}
-      size={size}
+      textSize={textSize}
       padding={padding}
       top={top}
       bottom={bottom}
-      shadow={shadow}
+      isShadow={isShadow}
       border={border}
     >
       {icon && <img src={icon} alt="media-button" />}

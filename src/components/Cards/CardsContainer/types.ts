@@ -5,6 +5,7 @@ export interface ICardsContainerWrapper {
   gap?: number
   top?: number
   bottom?: number
+  isWrap?: boolean
 }
 
 export interface ICardsContainer extends ICardsContainerWrapper {

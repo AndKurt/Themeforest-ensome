@@ -9,7 +9,7 @@ const { DEVICE } = theme
 export const CardsContainerWrapper = styled.div<ICardsContainerWrapper>`
   display: flex;
   flex-direction: ${({ directionRow }) => (directionRow ? 'row' : 'column')};
-  flex-wrap: wrap;
+  ${({ isWrap }) => isWrap && 'flex-wrap: wrap;'}
   gap: ${({ gap }) => (gap ? `${gap}px` : 0)};
   height: 100%;
   margin-bottom: ${({ bottom }) => (bottom ? `${bottom}px` : 0)};

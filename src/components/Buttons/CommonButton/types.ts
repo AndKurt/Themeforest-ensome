@@ -5,12 +5,13 @@ import { BackgroundColor, ButtonSize, Radius, TitleSize } from '@interfaces/styl
 export interface IButtonWrapper {
   color?: BackgroundColor
   radius?: Radius
-  buttonSize: ButtonSize
-  size?: TitleSize
+  width?: ButtonSize
+  height?: ButtonSize
+  textSize?: TitleSize
   padding?: number
   top?: number
   bottom?: number
-  shadow?: boolean
+  isShadow?: boolean
   border?: boolean
 }
 

@@ -16,8 +16,9 @@ export const Section2 = () => (
           et quasi architecto beatae vitae dicta sunt explicabo.
         </Paragraph>
         <CommonButton
-          buttonSize="medium"
-          shadow
+          width="XL"
+          height="M"
+          isShadow
           color="primary"
           name="Discover more"
           radius="S"

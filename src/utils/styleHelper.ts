@@ -1,7 +1,7 @@
-import { ButtonSize, JustifyContent, ParagraphSize, SvgSize, TitleSize } from '@interfaces/styles'
+import { ButtonSize, Color, JustifyContent, ParagraphSize, SvgSize, TitleSize } from '@interfaces/styles'
 import theme from '@styles/theme'
 
-const { PARAGRAPH, HEADLINE, SVG_SIZE, WIDTH } = theme
+const { PARAGRAPH, HEADLINE, SVG_SIZE, COLOR, BUTTON_WIDTH, BUTTON_HEIGHT } = theme
 
 export const setParagraphFontSize = (size: ParagraphSize) => {
   switch (size) {
@@ -65,17 +65,73 @@ export const setSvgSize = (size: SvgSize) => {
   }
 }
 
-export const setButtonSize = (size: ButtonSize) => {
+export const setWidthButtonSize = (size: ButtonSize) => {
   switch (size) {
-    case 'extra-small':
-      return WIDTH.buttonXS
-    case 'small':
-      return WIDTH.buttonS
-    case 'medium':
-      return WIDTH.buttonM
-    case 'large':
-      return WIDTH.buttonL
+    case 'XS':
+      return BUTTON_WIDTH.buttonXS
+    case 'S':
+      return BUTTON_WIDTH.buttonS
+    case 'M':
+      return BUTTON_WIDTH.buttonM
+    case 'L':
+      return BUTTON_WIDTH.buttonL
+    case 'XL':
+      return BUTTON_WIDTH.buttonXL
+    case 'round':
+      return BUTTON_WIDTH.buttonRound
+    case 'round-small':
+      return BUTTON_WIDTH.buttonRoundSmall
     default:
-      return WIDTH.buttonRound
+      return 'auto'
+  }
+}
+
+export const setHeightButtonSize = (size: ButtonSize) => {
+  switch (size) {
+    case 'XS':
+      return BUTTON_HEIGHT.buttonXS
+    case 'S':
+      return BUTTON_HEIGHT.buttonS
+    case 'M':
+      return BUTTON_HEIGHT.buttonM
+    case 'L':
+      return BUTTON_HEIGHT.buttonM
+    case 'round':
+      return BUTTON_HEIGHT.buttonRound
+    case 'round-small':
+      return BUTTON_HEIGHT.buttonRoundSmall
+    default:
+      return 'auto'
+  }
+}
+
+export const setColor = (color?: Color) => {
+  switch (color) {
+    case 'WHITE':
+      return COLOR.WHITE
+    case 'BLACK':
+      return COLOR.BLACK
+    case 'GREY':
+      return COLOR.GREY
+    case 'PRIMARY':
+      return COLOR.PRIMARY
+    case 'PRIMARY_HOVER':
+      return COLOR.PRIMARY_HOVER
+    case 'SECONDARY':
+      return COLOR.SECONDARY
+    case 'TERTIARY':
+      return COLOR.TERTIARY
+    case 'HELPER_BLUE_1':
+      return COLOR.HELPER_BLUE_1
+    case 'HELPER_BLUE_2':
+      return COLOR.HELPER_BLUE_2
+    case 'HELPER_BLUE_3':
+      return COLOR.HELPER_BLUE_2
+    case 'BACKGROUND':
+      return COLOR.BACKGROUND
+    case 'RED':
+      return COLOR.RED
+    default:
+      return COLOR.GREY
   }
 }

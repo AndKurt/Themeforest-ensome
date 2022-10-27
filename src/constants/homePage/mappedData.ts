@@ -80,3 +80,34 @@ export const testimonialData = [
       '“Ut enim ad minima veniam, quis nostrum exercitationem ullam corpor suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis utem vel eum iure reprehender qui in ea voluptate velit esse quam nihil molesti consequatur, vel illum.” ',
   },
 ]
+
+export const tariffCardData = [
+  {
+    plan: 'Free trial',
+    price: '$00',
+    options: ['For small teams – 5 users', 'Community support'],
+  },
+  {
+    plan: 'Lite',
+    price: '$99',
+    options: ['For small teams – 15 users', 'Individual support', 'Individual data – 60GB'],
+  },
+  {
+    plan: 'Basic',
+    price: '$00',
+    options: ['For big teams – 30 users', 'Individual support', 'Individual data – 120GB', 'Advanced permissions'],
+  },
+  {
+    plan: 'For enterprises',
+    price: 'Custom',
+    options: [
+      'Unlimited team members',
+      'Individual support',
+      'Unlimited Individual data',
+      'Advanced permissions',
+      'Data history',
+      'Audit log',
+      'All functions included',
+    ],
+  },
+]

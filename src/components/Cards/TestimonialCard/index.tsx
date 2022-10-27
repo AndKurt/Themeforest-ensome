@@ -4,7 +4,7 @@ import { Paragraph } from '@components/Paragraph'
 import { Title } from '@components/Titles'
 import { BlockLayout } from '@layout/BlockLayout'
 
-import { CardWrapper, StyledImg } from './styled'
+import { CardWrapper, PersonalData, StyledImg } from './styled'
 import { ITestimonialCard } from './types'
 
 export const TestimonialCard = ({
@@ -27,7 +27,7 @@ export const TestimonialCard = ({
   radius,
 }: ITestimonialCard) => (
   <CardWrapper width={width}>
-    <BlockLayout width={250} directionRow>
+    <PersonalData>
       <StyledImg src={src} alt={alt} radius={radius} imgSize={imgSize} />
       <BlockLayout>
         <Title size={titleSize} top={topTitle} bottom={bottomTitle}>
@@ -37,7 +37,7 @@ export const TestimonialCard = ({
           {paragraph1}
         </Paragraph>
       </BlockLayout>
-    </BlockLayout>
+    </PersonalData>
     <Paragraph size={paragraphSize2} top={topParagraph2} bottom={bottomParagraph2}>
       {paragraph2}
     </Paragraph>

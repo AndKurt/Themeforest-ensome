@@ -13,7 +13,7 @@ export const Section4 = () => (
       <BlockLayout width={540} directionRow jc="space-between" top={20}>
         {successData.map(({ title, text }) => (
           <BlockLayout width={160} key={title}>
-            <Title size="extra" color="blue" bottom={-20}>
+            <Title size="extra" color="PRIMARY" bottom={-20}>
               {title}
             </Title>
             <Paragraph size="regular_2">{text}</Paragraph>

@@ -32,14 +32,15 @@ export const Header = () => {
             ))}
           </nav>
           <CommonButton
-            buttonSize="small"
+            width="M"
+            height="S"
             color="primary"
             radius="S"
             name="Watch the demo"
             icon={playIcon}
-            size="semibold_7"
+            textSize="semibold_7"
             padding={10}
-            shadow
+            isShadow
             handleClick={handlePlayMedia}
           />
         </Section>

@@ -18,10 +18,10 @@ export const Section3 = () => (
           aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
         </Paragraph>
         <CommonButton
-          buttonSize="medium"
+          width="XL"
           color="primary"
           bottom={20}
-          shadow
+          isShadow
           name="Learn more"
           radius="S"
           handleClick={() => {}}

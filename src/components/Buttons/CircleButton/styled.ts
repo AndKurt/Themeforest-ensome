@@ -2,7 +2,7 @@ import styled from 'styled-components/macro'
 
 import theme from '@styles/theme'
 
-const { COLOR, HEADLINE, WIDTH, RADIUS, TRANSITION, BOX_SHADOW } = theme
+const { COLOR, HEADLINE, BUTTON_WIDTH, BUTTON_HEIGHT, RADIUS, TRANSITION, BOX_SHADOW } = theme
 
 export const CircleButtonWrapper = styled.button`
   align-items: center;
@@ -13,12 +13,12 @@ export const CircleButtonWrapper = styled.button`
   color: ${COLOR.WHITE};
   cursor: pointer;
   display: flex;
-  height: ${WIDTH.buttonRound};
+  height: ${BUTTON_HEIGHT.buttonRound};
   justify-content: center;
   outline: none;
   position: absolute;
   transition: ${TRANSITION.FAST};
-  width: ${WIDTH.buttonRound};
+  width: ${BUTTON_WIDTH.buttonRound};
   z-index: 10;
 
   :before {
@@ -39,9 +39,9 @@ export const CircleButtonWrapper = styled.button`
     border: 10px solid ${COLOR.WHITE};
     border-radius: ${RADIUS.FULL};
     content: '';
-    height: ${WIDTH.buttonRound};
+    height: ${BUTTON_HEIGHT.buttonRound};
     position: absolute;
-    width: ${WIDTH.buttonRound};
+    width: ${BUTTON_WIDTH.buttonRound};
     z-index: 1;
   }
 
