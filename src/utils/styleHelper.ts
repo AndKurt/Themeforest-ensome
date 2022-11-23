@@ -95,7 +95,7 @@ export const setHeightButtonSize = (size: ButtonSize) => {
     case 'M':
       return BUTTON_HEIGHT.buttonM
     case 'L':
-      return BUTTON_HEIGHT.buttonM
+      return BUTTON_HEIGHT.buttonL
     case 'round':
       return BUTTON_HEIGHT.buttonRound
     case 'round-small':

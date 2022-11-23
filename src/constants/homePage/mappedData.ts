@@ -3,6 +3,10 @@ import benefit_1 from '@assets/svg/benefit/benefit_1.svg'
 import benefit_2 from '@assets/svg/benefit/benefit_2.svg'
 import benefit_3 from '@assets/svg/benefit/benefit_3.svg'
 import benefit_4 from '@assets/svg/benefit/benefit_4.svg'
+// Blog Card
+import blog_img_1 from '@assets/webp/home_page/blog_card/blog_img_1.webp'
+import blog_img_2 from '@assets/webp/home_page/blog_card/blog_img_2.webp'
+import blog_img_3 from '@assets/webp/home_page/blog_card/blog_img_3.webp'
 // Users
 import testimonial_user_1 from '@assets/webp/home_page/testimonial_users/testimonial_user_1.webp'
 import testimonial_user_2 from '@assets/webp/home_page/testimonial_users/testimonial_user_2.webp'
@@ -109,5 +113,35 @@ export const tariffCardData = [
       'Audit log',
       'All functions included',
     ],
+  },
+]
+
+export const blogCardData = [
+  {
+    src: blog_img_1,
+    alt: 'blog_img_1',
+    date: '22 June 2022',
+    title: '22 June 2022',
+    paragraph:
+      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure...',
+    readMoreLink: '#',
+  },
+  {
+    src: blog_img_2,
+    alt: 'blog_img_1',
+    date: '22 June 2022',
+    title: 'Business analysis helps you  in finance',
+    paragraph:
+      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure...',
+    readMoreLink: '#',
+  },
+  {
+    src: blog_img_3,
+    alt: 'blog_img_1',
+    date: '22 June 2022',
+    title: '5 web portal examples your business can learn from',
+    paragraph:
+      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure...',
+    readMoreLink: '#',
   },
 ]

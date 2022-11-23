@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { BackgroundColor, ButtonSize, Radius, TitleSize } from '@interfaces/styles'
 
 export interface IButtonWrapper {
